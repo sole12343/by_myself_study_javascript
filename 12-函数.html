@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <script>
+        // 写一个打招呼的函数 hi
+        // function sayhai() {
+        //     document.write("hi~<br>");
+        // }
+        // sayhai();
+        // sayhai();
+        // sayhai();
+
+        // 把99乘法表封装到函数里面，重复调用3次
+        // function nine_nine() {
+        //     for (let i = 1; i <= 9; i++) {
+        //         for (let j = 1; j <= i; j++) {
+        //             document.write(`${j}*${i}=${i*j} `);
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // nine_nine();
+        // nine_nine();
+        // nine_nine();
+
+        // 1. 封装一个函数，计算两个数的和
+        // function add(num1, num2) {
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // document.write(add(1, 4));
+
+        //  封装一个函数，计算1-100之间所有数的和
+        // function sum_1_100() {
+        //     let sum = 0;
+        //     for (let i = 1; i <= 100; i++) {
+        //         sum += i;
+        //     }
+        //     return sum;
+        // }
+        // document.write(sum_1_100());
+
+        // 需求：学生的分数是一个数组,计算每个学生的总分
+        // let arr = [1, 2, 3, 4, 5];
+        // function add_array(array) {
+        //     let sum_score = 0
+        //     for (let i = 0; i < array.length; i++) {
+        //         sum_score += array[i];
+        //     }
+        //     return sum_score;
+        // }
+        // document.write(`您的总成绩是${add_array(arr)}`);
+
+        // 求任意数组中的最大值并返回这个最大值
+        // let arr = [1, 2, 3, 4, 5];
+
+        // function get_biggest(array) {
+        //     let biggest = 0;
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i] > biggest) {
+        //             biggest = array[i]
+        //         }
+        //     }
+        //     return biggest;
+        // }
+        // document.write(`最大的数字是${get_biggest(arr)}`);
+
+        // 此处输出20
+        // let num = 10;
+
+        // function f1() {
+        //     let num = 20;
+        //     console.log(num);
+        // }
+        // f1();
+
+
+        // 此处输出123
+        // function f1() {
+        //     let num = 123
+
+        //     function f2() {
+        //         console.log(num)
+        //     }
+        //     f2()
+        // }
+        // let num = 456
+        // f1()
+
+        // 需求： 用户输入秒数，可以自动转换为时分秒
+        let time = Number(prompt("请输入时间-秒"));
+
+        function timeswap(num) {
+            let sec = add_0(num % 60);
+            let m = add_0(parseInt(num / 60) % 60);
+            let hour = add_0(parseInt(parseInt(num / 60) / 60) % 60);
+
+            function add_0(amount) {
+                if (amount < 10) {
+                    amount = '0' + amount
+                }
+                return amount;
+            }
+            document.write(`转换时间后为${hour}小时 ${m}分钟 ${sec}秒`);
+        }
+        timeswap(time);
+    </script>
+</body>
+
+</html>

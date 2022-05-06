@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 需求：使用while循环，页面中打印，可以添加换行效果
+        // let i = 0;
+        // let n = Number(prompt("请输入循环次数"));
+        // while (i < n) {
+        //     document.write("月薪过万<br>")
+        //     i++;
+        // }
+
+        // 页面输出1-100
+        // let i = 0;
+
+        // while (i < 100) {
+        //     document.write(`${i+1}<br>`)
+        //     i++;
+        // }
+
+        //  计算从1加到100的总和并输出
+        // let i = 0,
+        //     sum = 0;
+        // while (i < 100) {
+        //     sum += i + 1;
+        //     i++;
+        // }
+        // document.write(`sum: ${sum}<br>`)
+
+        // 计算1-100之间的所有偶数和
+        // let i = 1,
+        //     sum = 0;
+        // while (i <= 100) {
+        //     if (i % 2 === 0) {
+        //         sum += i;
+        //     }
+        //     i++;
+        // }
+        // document.write(`偶数的sum: ${sum}<br>`)
+
+        // 需求：页面弹出对话框，‘你爱我吗’，如果输入‘爱’，则结束，否则一直弹出对话框
+        // let love;
+        // while (true) {
+        //     love = prompt("请输入爱我吗");
+        //     if (love === '爱') {
+        //         break;
+        //     }
+        // }
+
+        // 需求：用户可以选择存钱、取钱、查看余额和退出功能
+        let balance = 0,
+            choice;
+        while (true) {
+            choice = Number(prompt(`请选择您的操作:
+                                    1.取款
+                                    2.存款
+                                    3.查看余额
+                                    4.退出`));
+            if (choice === 1) {
+                balance += Number(prompt("请输入存款金额"));
+                document.write(`有新存款，余额为${balance}<br>`);
+            } else if (choice === 2) {
+                balance -= Number(prompt("请输入存款金额"));
+                document.write(`有新取款，余额为${balance}<br>`);
+            } else if (choice === 3) {
+                document.write(`您的余额为${balance}<br>`);
+            } else {
+                break;
+            }
+        }
+    </script>
+</body>

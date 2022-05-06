@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = "3.1415";
+        let num1 = Number(a);
+        console.log(num1);
+        let parse = parseInt(a);
+        console.log(parse);
+        let parse2 = parseFloat(a);
+        console.log(parse2);
+
+        // let num3, num2;
+        // num2 = prompt("请输入第一个数字");
+        // num3 = prompt("请输入第二个数字");
+        // document.write(+num2 + +num3);
+
+        //需求：用户输入商品价格和商品数量，以及收货地址，可以自动打印订单信息
+        let price, address, amount;
+        price = prompt("请输入商品价格");
+        amount = prompt("请输入商品数量");
+        address = prompt("请输入收货地址");
+        document.write(`    
+        <h3 align ='center'>订单页面</h3>
+        <table title="订单付款确认页面" border="2" align="center">
+        <tr>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>商品数量</td>
+            <td>总价</td>
+            <td>收货地址</td>
+        </tr>
+        <tr>
+            <td>华为手机</td>
+            <td >${price}</td>
+            <td >${amount}</td>
+            <td >${amount*price}</td>
+            <td >${address}</td>
+        </tr>
+    </table>`)
+    </script>
+</body>

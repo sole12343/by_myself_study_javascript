@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  利用for循环输出1~100岁
+        // for (let i = 0; i < 100; i++) {
+        //     document.write((i + 1).toString() + "岁<br>")
+        // }
+
+        // 求1-100之间所有的偶数和
+        // let sum = 0;
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 2 === 0) {
+        //         sum += i;
+        //     }
+        // }
+        // document.write("偶数的和为" + sum);
+
+        // 页面中打印5个小星星
+        // let n = 5;
+        // for (let i = 0; i < n; i++) {
+        //     document.write("⭐")
+        // }
+
+        // for循环的最大价值： 循环数组
+        // 需求： 请将 数组 [‘马超’，‘赵云’， ‘张飞’, ‘关羽‘，’黄忠’] 依次打印出来
+        // arr = ["马超", "赵云", "张飞", "关羽", "黄忠"];
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i] + "<br>")
+        // }
+
+        // 计算： 假如每天记住5个单词，3天后一共能记住多少单词？
+        // for (let i = 1; i <= 3; i++) {
+        //     document.write(`第${i}天` + "<br>");
+        //     for (let j = 1; j <= 5; j++) {
+        //         document.write(`记住第${j}个单词` + "<br>");
+        //     }
+        // }
+
+        // 需求： 页面中打印出5行5列的星星
+        // let m = Number(prompt("几行？"))
+        // let n = Number(prompt("几列？"))
+        // for (let i = 1; i <= m; i++) {
+        //     for (let j = 1; j <= n; j++) {
+        //         document.write(`⭐`);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // 打印倒三角形星星
+        // let m = Number(prompt("几行？"))
+        // for (let i = 1; i <= m; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         document.write(`⭐`);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // 九九乘法表
+        for (let i = 1; i <= 9; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`${j}*${i}=${i*j} `);
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
